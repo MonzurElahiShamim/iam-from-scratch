@@ -1,0 +1,16 @@
+# --- Dependencies (huge, reinstallable from package.json — never tracked) ---
+node_modules/
+
+# --- Secrets & environment (the important ones) ---
+# Real config with passwords/client-secrets. We commit ONLY .env.example (placeholders).
+.env
+.env.*
+!.env.example
+
+# --- Local TLS certificates from mkcert (machine-specific, and private keys) ---
+certs/
+*.pem
+
+# --- Noise ---
+*.log
+.DS_Store
