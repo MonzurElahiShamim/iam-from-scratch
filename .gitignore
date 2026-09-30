@@ -11,6 +11,13 @@ node_modules/
 certs/
 *.pem
 
+# --- curl cookie jars: these hold LIVE session tokens (bearer credentials). Never commit. ---
+*.cookies
+*.jar
+jar.txt
+alice.txt
+bob.txt
+
 # --- Noise ---
 *.log
 .DS_Store
