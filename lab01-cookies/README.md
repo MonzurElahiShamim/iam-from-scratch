@@ -8,6 +8,12 @@
 
 > This lab builds a session by hand — no session library — so the coat-check mechanism is fully visible.
 
+## The idea in plain words
+
+Lab 00 showed the server needs a **separate memory per visitor** and a way for each visitor to say *"this memory is mine"* on every request. The web's built-in tool for that is the **cookie**: the server hands the browser a little note (`Set-Cookie`), and the browser automatically hands it back on every later request to the same site. The note is just a random ticket number; the real data stays on the server, filed under that number — a coat-check ticket.
+
+The catch: the ticket is a **bearer token** — whoever holds it *is* you, no questions asked. So a stolen ticket is a stolen session. That's why cookies carry protective **flags**: `Secure` (only send over HTTPS), `HttpOnly` (hide it from page JavaScript so an injected script can't steal it), and `SameSite` (control whether it's sent when *another* site triggers the request). One detail you'll feel throughout: a cookie belongs to **one domain** and is only ever sent back to that domain — which is both why sites stay isolated *and* why single sign-on (Lab 02) has to use redirects.
+
 ---
 
 ## Setup

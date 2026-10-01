@@ -8,6 +8,12 @@
 
 > ⚠️ **This lab ends deliberately broken.** The final code here is *supposed* to be wrong. Lab 01 fixes it with cookies. Don't copy this pattern into anything real.
 
+## The idea in plain words
+
+The web has a strange property: **the server forgets you the instant it answers.** Every click is a brand-new request that arrives like a stranger — there's no built-in memory telling the server "this is the same person who just logged in." That's what *stateless* means.
+
+So before you can have *any* login, you must solve one thing: **how does the server remember you between requests?** This lab makes that problem concrete, then tries the obvious fix — one shared variable — and watches it blow up, because a single shared slot can't tell two people apart. That failure is exactly why the real solution has to exist: a **separate memory per visitor**, plus a **ticket** that says which memory is yours. That ticket is the cookie, in Lab 01.
+
 ---
 
 ## Setup
