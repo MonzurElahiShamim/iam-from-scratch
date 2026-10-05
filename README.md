@@ -65,10 +65,10 @@ The lab READMEs walk you through building the code yourself in stages, with the 
 |---|---|---|---|
 | [00](lab00-stateless/README.md) | Statelessness | Why HTTP has no memory; the global-variable trap | ✅ |
 | [01](lab01-cookies/README.md) | Cookies & sessions | The coat-check session; cookie theft; `Secure` / `HttpOnly` / `SameSite` | ✅ |
-| [02](lab02-sso/README.md) | Single sign-on | The redirect dance across three servers, by hand | 🚧 in progress |
-| 03 | AuthN vs AuthZ | The `if (authenticated) grant()` bug; the revocation test | planned |
-| 04 | JWTs | Build, verify, forge (`alg:none`, algorithm confusion), and defend | planned |
-| 05 | OAuth 2.0 | The authorization code flow against a real IdP; PKCE | planned |
+| [02](lab02-sso/README.md) | Single sign-on | The redirect dance across three servers, by hand | ✅ |
+| [03](lab03-authn-authz/README.md) | AuthN vs AuthZ | The `if (authenticated) grant()` bug; the revocation test | ✅ |
+| [04](lab04-jwt/README.md) | JWTs | Build, verify, forge (`alg:none`, algorithm confusion), and defend | ✅ |
+| [05](lab05-oauth/README.md) | OAuth 2.0 | The authorization code flow against a real IdP; PKCE | ✅ |
 | 06 | OpenID Connect | Real login + your own resource server; the confused-deputy attack | planned |
 | 07 | Refresh & revocation | Rotation, the revocation gap, JWT vs opaque tokens | planned |
 | 08 | SAML *(optional)* | Signed XML assertions; the enterprise-SSO wrinkles | planned |
