@@ -1,0 +1,10 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: iam-keycloak
+    command: start-dev            # dev mode: no HTTPS requirement, quick boot
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
+    ports:
+      - "8888:8080"
